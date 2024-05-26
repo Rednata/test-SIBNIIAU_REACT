@@ -1,0 +1,33 @@
+import './App.css';
+import { ButtonAddRow } from './components/ButtonAddRow';
+import { Table } from './components/Table';
+import { useSelector } from 'react-redux';
+import { ButtonLoad } from './components/ButtonLoad';
+import { ButtonHiddenColumns } from './components/ButtonHiddenColumns';
+import { ButtonSaveTable } from './components/ButtonSaveTable';
+import { ButtonAddColumn } from './components/ButtonAddColumn';
+
+const App = () => {
+  const dataTable = useSelector(state => state.dataTable.data);
+  const dataTitle = useSelector(state => state.dataTitle.dataTitle);
+
+  return (
+    <div className="container">
+      <div id="modal-form"></div>
+      <div className="wrap-load">
+        <ButtonLoad />
+        <ButtonSaveTable />
+        <ButtonAddRow />
+        <ButtonAddColumn />
+      </div>
+      <div className="wrap-hidden">
+        <ButtonHiddenColumns />
+      </div>
+      {
+        !!dataTitle.length && !!dataTable.length && <Table />
+      }
+    </div>
+  );
+};
+
+export default App;
