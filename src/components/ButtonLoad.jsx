@@ -1,5 +1,5 @@
 import { asyncRequestDataTable } from '../store/DataTable/dataTableReducer';
-import { asyncRequestDataTitle } from '../store/DataTitle/dataTitleReducer';
+// import { asyncRequestDataTitle } from '../store/DataTitle/dataTitleReducer';
 import { useDispatch } from 'react-redux';
 
 export const ButtonLoad = () => {
@@ -7,7 +7,7 @@ export const ButtonLoad = () => {
 
   const handleClickLoadData = () => {
     dispatch(asyncRequestDataTable());
-    dispatch(asyncRequestDataTitle());
+    // dispatch(asyncRequestDataTitle());
   };
 
   return (

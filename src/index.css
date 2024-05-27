@@ -261,3 +261,45 @@ body {
 .select__title {
 	font-weight: 700;
 }
+
+.label__file {	
+	padding: 5px;
+	max-width: 100px;
+	background-color: #d3a5a5;
+	border-radius: 5px;
+	height: 25px;	
+	cursor: pointer;
+	margin-right: 30px;
+}
+
+.input__file {	
+	opacity: 0;
+	transform: scale(0);
+	width: 1px
+
+}
+
+.load-box {
+	display: flex;
+	gap: 10px;
+	gap: 100px;
+}
+
+.choice-load {
+	display: flex;
+	border: 1px solid #dddddd;
+}
+
+.standard-load, .form__file {	
+	border: 1px solid #dddddd;
+	padding: 10px 20px;
+	border-radius: 15px;
+}
+
+.standard-load {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+

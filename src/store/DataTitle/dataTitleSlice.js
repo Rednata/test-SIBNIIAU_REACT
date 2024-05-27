@@ -22,6 +22,10 @@ export const dataTitleSlice = createSlice({
       state.dataTitle = [];
       state.error = action.payload;
     },
+    loadDataTitleFromOutside: (state, action) => {
+      state.dataTitle = action.payload;
+      state.error = '';
+    },
     changeArrowUpTitle: (state, action) => {
       state.upTitles = action.payload;
     },

@@ -20,6 +20,10 @@ export const dataTableSlice = createSlice({
       state.data = [];
       state.error = action.payload;
     },
+    loadDataTableFromOutside: (state, action) => {
+      state.data = action.payload;
+      state.error = '';
+    },
     dataTableSorted: (state, action) => {
       state.data = action.payload;
       state.error = '';

@@ -1,7 +1,0 @@
-[
-  {"field": "ФИО", "type": "string"}, 
-  {"field": "Должность", "type": "string"}, 
-  {"field": "Возраст", "type": "number"}, 
-  {"field": "Оклад", "type": "number"}, 
-  {"field": "Получено", "type": "boolean"}
-]
