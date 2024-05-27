@@ -4,11 +4,12 @@ import { useEffect, useState } from 'react';
 
 export const ButtonSaveTable = () => {
   const dataTable = useSelector(state => state.dataTable.data);
+  const dataTitle = useSelector(state => state.dataTitle.dataTitle);
   const [isAvailable, setIsAvailable] = useState(!!dataTable.length);
 
   const handleSaveTable = ({ target }) => {
-    const file = new File([JSON.stringify(dataTable)], 'file.json');
-
+    const data = [dataTitle, dataTable];
+    const file = new File([JSON.stringify(data)], 'file.json');
     const link = document.createElement('a');
     link.download = file.name;
     link.href = URL.createObjectURL(file);
